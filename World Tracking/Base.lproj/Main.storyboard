@@ -31,6 +31,18 @@
                                     <action selector="add:" destination="BYZ-38-t0r" eventType="touchUpInside" id="riW-HO-bvW"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Da-OR-R1Z">
+                                <rect key="frame" x="314" y="762" width="80" height="80"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="LGP-5r-1uT"/>
+                                    <constraint firstAttribute="height" constant="80" id="iRh-Kr-Ox3"/>
+                                </constraints>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zVd-Gg-6cN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -38,8 +50,10 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KP3-KT-HaP" secondAttribute="bottom" constant="20" id="3EP-0P-xkK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MlZ-6H-v99" secondAttribute="bottom" id="NSR-ih-L2I"/>
                             <constraint firstItem="KP3-KT-HaP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="QQ6-gY-q4X"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4Da-OR-R1Z" secondAttribute="bottom" constant="20" id="VDd-GE-QFI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MlZ-6H-v99" secondAttribute="trailing" id="Wim-FO-FwM"/>
                             <constraint firstItem="MlZ-6H-v99" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Z4v-oG-CKG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4Da-OR-R1Z" secondAttribute="trailing" constant="20" id="cnE-kb-oiS"/>
                             <constraint firstItem="MlZ-6H-v99" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iAF-3G-VkP"/>
                         </constraints>
                     </view>
@@ -55,6 +69,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
