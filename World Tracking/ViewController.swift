@@ -26,9 +26,16 @@ class ViewController: UIViewController {
         node.geometry?.firstMaterial?.specular.contents = UIColor.white
         node.geometry?.firstMaterial?.diffuse.contents = UIColor.blue
         
+        // Place randomly across x, y axes
         let x = randomNumbers(firstNum: 0.3, secondNum: -0.3)
         let y = randomNumbers(firstNum: 0.3, secondNum: -0.3)
         node.position = SCNVector3(x, y,-0.3)
+        
+        //Give the block a random rotation
+        let rotX = randomNumbers(firstNum: -1, secondNum: 1)
+        let rotY = randomNumbers(firstNum: -1, secondNum: 1)
+        node.eulerAngles = SCNVector3(rotX, rotY, 0)
+        
         self.sceneView.scene.rootNode.addChildNode(node)
     }
     
@@ -48,5 +55,10 @@ class ViewController: UIViewController {
     func randomNumbers(firstNum: CGFloat, secondNum: CGFloat) -> CGFloat {
      return CGFloat(arc4random()) / CGFloat(UINT32_MAX) * abs(firstNum - secondNum) + min(firstNum, secondNum)
     }
+    
+    
 }
 
+extension Int {
+    var degreesToRadians: Double { return Double(self) * .pi / 180 }
+}
